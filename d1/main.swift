@@ -11,7 +11,7 @@ func getCombinedNumberFromLine(_ line: String) -> Int {
 }
 
 func part1() throws -> Int {
-    let day1data = URL(fileURLWithPath: "./Sources/data/day1.txt")
+    let day1data = URL(fileURLWithPath: "./d1/data/day1.txt")
     do {
         let data: Data = try Data(contentsOf: day1data)
         if let content = String(data: data, encoding: .utf8) {
@@ -47,7 +47,7 @@ func mutateNamedNumbers(_ line: String) -> String {
 }
 
 func part2() throws -> Int {
-    let day1data = URL(fileURLWithPath: "./Sources/data/day1-part2.txt")
+    let day1data = URL(fileURLWithPath: "./d1/data/day1-part2.txt")
     do {
         let data: Data = try Data(contentsOf: day1data)
         if let content = String(data: data, encoding: .utf8) {
