@@ -7,15 +7,6 @@ func getCombinedNumberFromLine(_ line: String) -> Int {
     let characters = Array(line)
     let first = characters[characters.firstIndex(where: { $0.isNumber }) ?? 0]
     let last = characters[characters.lastIndex(where: { $0.isNumber }) ?? 0]
-    return Int("\(first)\(last)") ?? 0
-}
-
-func getCombinedNumberFromLineNoRepeat(_ line: String) -> Int {
-    let characters = Array(line)
-    let firstIndex = characters.firstIndex(where: { $0.isNumber }) ?? 0
-    let first = characters[firstIndex]
-    let lastIndex = characters.lastIndex(where: { $0.isNumber }) ?? 0
-    let last = characters[lastIndex]
     // if firstIndex == lastIndex { fuck me, I thought repeats were bad
     //     return Int("\(first)") ?? 0
     // }
@@ -64,7 +55,7 @@ func part2() throws -> Int {
         let data: Data = try Data(contentsOf: day1data)
         if let content = String(data: data, encoding: .utf8) {
             let lines: [String] = content.components(separatedBy: "\n").map { mutateNamedNumbers($0) }
-            let numbers: [Int] = lines.map { getCombinedNumberFromLineNoRepeat($0) }
+            let numbers: [Int] = lines.map { getCombinedNumberFromLine($0) }
             return numbers.reduce(0, +)
         }
         return 0
