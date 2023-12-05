@@ -71,6 +71,31 @@
             "name": "Release d3",
             "program": "${workspaceFolder:aoc-2023}/.build/release/d3",
             "preLaunchTask": "swift: Build Release d3"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:aoc-2023}",
+            "name": "Debug d4",
+            "program": "${workspaceFolder:aoc-2023}/.build/debug/d4",
+            "preLaunchTask": "swift: Build Debug d4"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:aoc-2023}",
+            "name": "Release d4",
+            "program": "${workspaceFolder:aoc-2023}/.build/release/d4",
+            "preLaunchTask": "swift: Build Release d4"
         }
+        
     ]
 }
