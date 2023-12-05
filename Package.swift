@@ -16,6 +16,10 @@ let package = Package(
             name: "d2",
             path: "d2"
         ),
+        .executableTarget(
+            name: "d3",
+            path: "d3"
+        ),
         .testTarget(
             name: "d1Tests",
             dependencies: ["d1"]
@@ -23,6 +27,10 @@ let package = Package(
         .testTarget(
             name: "d2Tests",
             dependencies: ["d2"]
+        ),
+        .testTarget(
+            name: "d3Tests",
+            dependencies: ["d3"]
         ),
     ]
 )
